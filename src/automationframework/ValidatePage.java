@@ -6,15 +6,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ValidatePage {
-	public static void validatePage(String siteAndUI)
+	public static void validatePage(String siteAndUI[])
 	{
 		boolean status = false;
 		System.setProperty("webdriver.chrome.driver","C:/tool/Chromedriver/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.get(siteAndUI);
+		driver.get(siteAndUI[0]);
 		try
 		{
-		status = driver.findElement(By.xpath("//*[@id='main-nav']")).isDisplayed();
+		status = driver.findElement(By.xpath(siteAndUI[1])).isDisplayed();
 		}
 		catch(NoSuchElementException e)
 		{

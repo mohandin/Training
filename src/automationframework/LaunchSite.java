@@ -1,12 +1,5 @@
 package automationframework;
 
-import org.apache.commons.lang3.time.StopWatch;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LaunchSite {
 
@@ -21,8 +14,11 @@ public class LaunchSite {
 		Configurator.siteAndUI[0] = "https://modernpreciouscoin.com/about-us/";
 		Configurator.siteAndUI[1] = "main-nav";
 		PerformanceTest.measurePerformance(Configurator.siteAndUI);*/
-		ValidatePage.validatePage("https://modernpreciouscoin.com");
 		
+		//Configurator.siteAndUI[0] = "https://modernpreciouscoin.com";
+		//Configurator.siteAndUI[1] = "//*[@id='main-nav']";
+		//ValidatePage.validatePage(Configurator.siteAndUI);
+		MenuTest.topMenuValidate();
 	}
 
 }
