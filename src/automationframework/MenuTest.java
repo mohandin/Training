@@ -1,5 +1,7 @@
 package automationframework;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -17,7 +19,7 @@ public class MenuTest {
 	/*
 	 * This class tests the top menu and verifies the regions are displayed when the user clicks on menu header.
 	 */
-	public static void topMenuValidate()
+	public static void topMenuDropdownValidate() throws IOException
 	{
 		boolean status = false;
 		System.setProperty("webdriver.chrome.driver","C:/tool/Chromedriver/chromedriver.exe");
@@ -46,11 +48,25 @@ public class MenuTest {
 		}
 		catch(NoSuchElementException e)
 		{
+				Configurator.logmsg.write("Is Element appear " + false);
 				System.out.println("Is Element appear " + false);
 				
 		}
 
+		Configurator.logmsg.write("Is Element appear " + status);
 		System.out.println("Is Element appear " + status);
+		driver.close();
+	}
+	
+	public static void topMenuPagesValidate()
+	{
+		System.setProperty("webdriver.chrome.driver","C:/tool/Chromedriver/chromedriver.exe");
+		
+		WebDriver driver = new ChromeDriver();		
+		driver.get("https://modernpreciouscoin.com");
+		
+		Actions builder = new Actions(driver);
+		
 		WebElement link_Search = driver.findElement(By.xpath("//*[@id=\"woocommerce_product_search-5\"]/div/form/button"));
 		builder.moveToElement(link_Search).click().perform();
 		driver.close();
