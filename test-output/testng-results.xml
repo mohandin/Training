@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="12751" started-at="2018-09-11T20:11:15Z" finished-at="2018-09-11T20:11:28Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="12751" started-at="2018-09-11T20:11:15Z" finished-at="2018-09-11T20:11:28Z">
+      <class name="automationframework.ValidateContactUs">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:automationframework.ValidateContactUs@18be83e4]" name="beforeMethod" is-config="true" duration-ms="12218" started-at="2018-09-11T20:11:15Z" finished-at="2018-09-11T20:11:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="main()[pri:0, instance:automationframework.ValidateContactUs@18be83e4]" name="main" duration-ms="493" started-at="2018-09-11T20:11:28Z" finished-at="2018-09-11T20:11:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- main -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:automationframework.ValidateContactUs@18be83e4]" name="afterMethod" is-config="true" duration-ms="1" started-at="2018-09-11T20:11:28Z" finished-at="2018-09-11T20:11:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- automationframework.ValidateContactUs -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

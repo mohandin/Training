@@ -5,6 +5,7 @@ import java.io.IOException;
 public class LaunchSite {
 
 	public static void main(String[] args) throws IOException  {
+		if(Parameters.loggerOn == 1)
 		Configurator.intialize();
 		// TODO Auto-generated method stub
 		/*Configurator.siteAndUI[0] = "https://modernpreciouscoin.com";
@@ -20,7 +21,8 @@ public class LaunchSite {
 		//Configurator.siteAndUI[0] = "https://modernpreciouscoin.com";
 		//Configurator.siteAndUI[1] = "//*[@id='main-nav']";
 		//ValidatePage.validatePage(Configurator.siteAndUI);
-		MenuTest.topMenuDropdownValidate();
+		//MenuTest.topMenuDropdownValidate();
+		ContactUs.insertForm();
 		Configurator.logmsg.close();
 	}
 

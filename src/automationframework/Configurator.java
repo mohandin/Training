@@ -9,9 +9,20 @@ public class Configurator {
 public static String loggerfiler = "C:/temp/Logger.txt";
 public static String [] siteAndUI = new String[2];
 public static BufferedWriter logmsg;
-
+/*
+Configurator()
+{
+	try {
+		Configurator.intialize();
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+}
+*/
 public static void intialize() throws IOException
 {
+	
 	
 	File file = new File(loggerfiler);
 	if(file.delete())

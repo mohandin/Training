@@ -25,7 +25,7 @@ public class MenuTest {
 		System.setProperty("webdriver.chrome.driver","C:/tool/Chromedriver/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		
-		driver.get("https://modernpreciouscoin.com");
+		driver.get(Parameters.urlHome);
 		Actions builder = new Actions(driver);
 		
 		status = driver.findElement(By.xpath("//*[@id=\"primary-menu\"]/li[2]/ul/li[1]/a")).isDisplayed();
