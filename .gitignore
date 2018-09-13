@@ -1,0 +1,7 @@
+/test-output/
+test-output/emailable-report.html
+test-output/FullRun/Test.html
+test-output/junitreports/TEST-automationframework.ContactPageValidation.xml
+test-output/old/FullRun/methods-alphabetical.html
+test-output/old/index.html
+test-output/testng-results.xml

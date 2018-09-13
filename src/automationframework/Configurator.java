@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import org.openqa.selenium.chrome.ChromeOptions;
+
 public class Configurator {
 public static String loggerfiler = "C:/temp/Logger.txt";
 public static String [] siteAndUI = new String[2];
@@ -23,7 +25,8 @@ Configurator()
 public static void intialize() throws IOException
 {
 	
-	
+	ChromeOptions options = new ChromeOptions();
+	options.addArguments("start-maximized");
 	File file = new File(loggerfiler);
 	if(file.delete())
 	{
@@ -39,6 +42,12 @@ public static void intialize() throws IOException
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
+}
+
+public static void cleanup() throws IOException
+{
+	
+	logmsg.close();
 }
 
 

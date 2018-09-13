@@ -3,13 +3,13 @@ package automationframework;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import org.testng.annotations.BeforeMethod;
+import java.io.IOException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 
 public class ContactPageValidation {
@@ -93,8 +93,9 @@ public class ContactPageValidation {
   }
   
   @BeforeMethod
-  public void beforeMethod() {
+  public void beforeMethod() throws IOException {
 	  	
+		Configurator.intialize();
 		System.setProperty("webdriver.chrome.driver","C:/tool/Chromedriver/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get(Parameters.urlContactPage);
@@ -103,8 +104,9 @@ public class ContactPageValidation {
   }
 
   @AfterMethod
-  public void afterMethod() {
+  public void afterMethod() throws IOException {
 	//  driver.quit();
+	  Configurator.cleanup();
   }
 
 }

@@ -2,36 +2,36 @@
 <testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="52546" started-at="2018-09-13T14:48:12Z" finished-at="2018-09-13T14:49:05Z">
+  <suite name="FullRun" duration-ms="20552" started-at="2018-09-13T15:09:44Z" finished-at="2018-09-13T15:10:04Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="52546" started-at="2018-09-13T14:48:12Z" finished-at="2018-09-13T14:49:05Z">
+    <test name="Test" duration-ms="20552" started-at="2018-09-13T15:09:44Z" finished-at="2018-09-13T15:10:04Z">
       <class name="automationframework.ContactPageValidation">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:automationframework.ContactPageValidation@26be92ad]" name="beforeMethod" is-config="true" duration-ms="25873" started-at="2018-09-13T14:48:12Z" finished-at="2018-09-13T14:48:38Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:automationframework.ContactPageValidation@26be92ad]" name="beforeMethod" is-config="true" duration-ms="8075" started-at="2018-09-13T15:09:44Z" finished-at="2018-09-13T15:09:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="checkValidationMsg()[pri:0, instance:automationframework.ContactPageValidation@26be92ad]" name="checkValidationMsg" duration-ms="614" started-at="2018-09-13T14:48:38Z" finished-at="2018-09-13T14:48:38Z">
+        <test-method status="PASS" signature="checkValidationMsg()[pri:0, instance:automationframework.ContactPageValidation@26be92ad]" name="checkValidationMsg" duration-ms="601" started-at="2018-09-13T15:09:52Z" finished-at="2018-09-13T15:09:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkValidationMsg -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:automationframework.ContactPageValidation@26be92ad]" name="beforeMethod" is-config="true" duration-ms="25621" started-at="2018-09-13T14:48:38Z" finished-at="2018-09-13T14:49:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:automationframework.ContactPageValidation@26be92ad]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-09-13T14:48:38Z" finished-at="2018-09-13T14:48:38Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:automationframework.ContactPageValidation@26be92ad]" name="afterMethod" is-config="true" duration-ms="2" started-at="2018-09-13T15:09:52Z" finished-at="2018-09-13T15:09:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="FAIL" signature="inputValues()[pri:0, instance:automationframework.ContactPageValidation@26be92ad]" name="inputValues" duration-ms="410" started-at="2018-09-13T14:49:04Z" finished-at="2018-09-13T14:49:05Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:automationframework.ContactPageValidation@26be92ad]" name="beforeMethod" is-config="true" duration-ms="11412" started-at="2018-09-13T15:09:52Z" finished-at="2018-09-13T15:10:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="inputValues()[pri:0, instance:automationframework.ContactPageValidation@26be92ad]" name="inputValues" duration-ms="431" started-at="2018-09-13T15:10:04Z" finished-at="2018-09-13T15:10:04Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
-expected [Validation Msg is appearing] but found [true]]]>
+expected [Validation Msg is appearing] but found [false]]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: The following asserts failed:
-expected [Validation Msg is appearing] but found [true]
+expected [Validation Msg is appearing] but found [false]
 at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
 at automationframework.ContactPageValidation.inputValues(ContactPageValidation.java:92)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -65,11 +65,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inputValues -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:automationframework.ContactPageValidation@26be92ad]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-09-13T14:49:05Z" finished-at="2018-09-13T14:49:05Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:automationframework.ContactPageValidation@26be92ad]" name="afterMethod" is-config="true" duration-ms="3" started-at="2018-09-13T15:10:04Z" finished-at="2018-09-13T15:10:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
       </class> <!-- automationframework.ContactPageValidation -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- FullRun -->
 </testng-results>
