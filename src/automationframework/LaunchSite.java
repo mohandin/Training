@@ -22,7 +22,9 @@ public class LaunchSite {
 		//Configurator.siteAndUI[1] = "//*[@id='main-nav']";
 		//ValidatePage.validatePage(Configurator.siteAndUI);
 		//MenuTest.topMenuDropdownValidate();
-		ContactUs.insertForm();
+	//	ContactUs.insertForm();
+	
+		ContactPageValidation.checkValidationMsg();
 		Configurator.logmsg.close();
 	}
 
