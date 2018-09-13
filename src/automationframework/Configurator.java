@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Configurator {
@@ -24,9 +25,7 @@ Configurator()
 */
 public static void intialize() throws IOException
 {
-	
-	ChromeOptions options = new ChromeOptions();
-	options.addArguments("start-maximized");
+
 	File file = new File(loggerfiler);
 	if(file.delete())
 	{

@@ -9,6 +9,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterMethod;
 
@@ -97,7 +98,10 @@ public class ContactPageValidation {
 	  	
 		Configurator.intialize();
 		System.setProperty("webdriver.chrome.driver","C:/tool/Chromedriver/chromedriver.exe");
-		driver = new ChromeDriver();
+		
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("start-maximized");
+		driver = new ChromeDriver(options);
 		driver.get(Parameters.urlContactPage);
 		
 	  
