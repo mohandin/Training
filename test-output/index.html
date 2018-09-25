@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,6 +103,11 @@
                       <span>
                         <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-FullRun" title="automationframework.ContactPageValidation" hash-for-method="inputValues">inputValues</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FullRun" title="automationframework.PerformanceTest" hash-for-method="main">main</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-FullRun -->
@@ -144,7 +149,27 @@
                   <span class="method-name">inputValues</span>
                   <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
 	expected [Validation Msg is appearing] but found [false]
-	at automationframework.ContactPageValidation.inputValues(ContactPageValidation.java:92)
+	at automationframework.ContactPageValidation.inputValues(ContactPageValidation.java:93)
+... Removed 26 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-FullRun-class-failed -->
+          <div class="suite-FullRun-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">automationframework.PerformanceTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="main">
+                  </a> <!-- main -->
+                  <span class="method-name">main</span>
+                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
+	expected [Page is too slow 30574] but found [true]
+	at automationframework.PerformanceTest.main(PerformanceTest.java:39)
 ... Removed 26 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -179,6 +204,7 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;automationframework.ContactPageValidation&quot;/&gt;
+      &lt;class name=&quot;automationframework.PerformanceTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- FullRun --&gt;
@@ -192,7 +218,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -218,20 +244,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'checkValidationMsg')
-data.setCell(0, 2, 'automationframework.ContactPageValidation')
-data.setCell(0, 3, 601);
+data.setCell(0, 1, 'main')
+data.setCell(0, 2, 'automationframework.PerformanceTest')
+data.setCell(0, 3, 30581);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'inputValues')
+data.setCell(1, 1, 'checkValidationMsg')
 data.setCell(1, 2, 'automationframework.ContactPageValidation')
-data.setCell(1, 3, 431);
+data.setCell(1, 3, 691);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'inputValues')
+data.setCell(2, 2, 'automationframework.ContactPageValidation')
+data.setCell(2, 3, 513);
 window.suiteTableData['FullRun']= { tableData: data, tableDiv: 'times-div-FullRun'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 31 seconds</span>
               <div id="times-div-FullRun">
               </div> <!-- times-div-FullRun -->
             </div> <!-- times-div -->
@@ -264,25 +294,42 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">checkValidationMsg</span>
-                <span class="method-start">8075 ms</span>
+                <span class="method-start">13024 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">8678 ms</span>
+                <span class="method-start">13717 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">8680 ms</span>
+                <span class="method-start">13720 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">inputValues</span>
-                <span class="method-start">20092 ms</span>
+                <span class="method-start">20749 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">20526 ms</span>
+                <span class="method-start">21265 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">automationframework.PerformanceTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">21269 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">main</span>
+                <span class="method-start">23975 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">54569 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

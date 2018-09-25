@@ -10,6 +10,13 @@
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- automationframework.ContactPageValidation -->
+      <class name="automationframework.PerformanceTest">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="main"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- automationframework.PerformanceTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [FullRun] -->
