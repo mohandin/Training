@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
+                    <span class="method-stats">4 methods, 3 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,12 +102,17 @@
                     <div class="method-list-content failed suite-FullRun">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-FullRun" title="automationframework.ContactPageValidation" hash-for-method="inputValues">inputValues</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-FullRun" title="automationframework.PerformanceTest" hash-for-method="contactPage">contactPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-FullRun" title="automationframework.PerformanceTest" hash-for-method="main">main</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-FullRun" title="automationframework.PerformanceTest" hash-for-method="homePage">homePage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FullRun" title="automationframework.ContactPageValidation" hash-for-method="inputValues">inputValues</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-FullRun -->
@@ -164,12 +169,26 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="main">
-                  </a> <!-- main -->
-                  <span class="method-name">main</span>
+                  <a name="contactPage">
+                  </a> <!-- contactPage -->
+                  <span class="method-name">contactPage</span>
                   <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
-	expected [Page is too slow 30574] but found [true]
-	at automationframework.PerformanceTest.main(PerformanceTest.java:39)
+	Page is too slow the page took 19 the pass criteria is less than 10 seconds expected [true] but found [false]
+	at automationframework.PerformanceTest.performanceTest(PerformanceTest.java:67)
+	at automationframework.PerformanceTest.contactPage(PerformanceTest.java:25)
+... Removed 26 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="homePage">
+                  </a> <!-- homePage -->
+                  <span class="method-name">homePage</span>
+                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
+	Page is too slow the page took 22 the pass criteria is less than 10 seconds expected [true] but found [false]
+	at automationframework.PerformanceTest.performanceTest(PerformanceTest.java:67)
+	at automationframework.PerformanceTest.homePage(PerformanceTest.java:32)
 ... Removed 26 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -201,12 +220,12 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;FullRun&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Regression&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;automationframework.ContactPageValidation&quot;/&gt;
       &lt;class name=&quot;automationframework.PerformanceTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
+  &lt;/test&gt; &lt;!-- Regression --&gt;
 &lt;/suite&gt; &lt;!-- FullRun --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -218,7 +237,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (2 classes)</span>
+                <span class="test-name">Regression (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -244,24 +263,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'main')
+data.setCell(0, 1, 'homePage')
 data.setCell(0, 2, 'automationframework.PerformanceTest')
-data.setCell(0, 3, 30581);
+data.setCell(0, 3, 22503);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'checkValidationMsg')
-data.setCell(1, 2, 'automationframework.ContactPageValidation')
-data.setCell(1, 3, 691);
+data.setCell(1, 1, 'contactPage')
+data.setCell(1, 2, 'automationframework.PerformanceTest')
+data.setCell(1, 3, 19664);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'inputValues')
+data.setCell(2, 1, 'checkValidationMsg')
 data.setCell(2, 2, 'automationframework.ContactPageValidation')
-data.setCell(2, 3, 513);
+data.setCell(2, 3, 663);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'inputValues')
+data.setCell(3, 2, 'automationframework.ContactPageValidation')
+data.setCell(3, 3, 439);
 window.suiteTableData['FullRun']= { tableData: data, tableDiv: 'times-div-FullRun'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 31 seconds</span>
+              <span class="suite-total-time">Total running time: 43 seconds</span>
               <div id="times-div-FullRun">
               </div> <!-- times-div-FullRun -->
             </div> <!-- times-div -->
@@ -294,42 +317,56 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">checkValidationMsg</span>
-                <span class="method-start">13024 ms</span>
+                <span class="method-start">27205 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">13717 ms</span>
+                <span class="method-start">27869 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">13720 ms</span>
+                <span class="method-start">27872 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">inputValues</span>
-                <span class="method-start">20749 ms</span>
+                <span class="method-start">46759 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">21265 ms</span>
+                <span class="method-start">47201 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">automationframework.PerformanceTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">21269 ms</span>
+                <span class="method-start">47205 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">main</span>
-                <span class="method-start">23975 ms</span>
+                <span class="method-name">contactPage</span>
+                <span class="method-start">50176 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">54569 ms</span>
+                <span class="method-start">69850 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">70559 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">homePage</span>
+                <span class="method-start">73185 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">95689 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

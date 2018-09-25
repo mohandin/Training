@@ -20,23 +20,17 @@ public class PerformanceTest {
 	public Actions builder;
 	
 	  @Test
-	  public void main() {
+	  public void contactPage() {
 		  	
-		  	SoftAssert softAssert = new SoftAssert();
-			StopWatch pageLoad = new StopWatch();
-			pageLoad.start();
-			driver.get(Parameters.urlContactPage);
-			 WebDriverWait wait = new WebDriverWait(driver, 10);
-		        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("main-nav")));
-
-		        pageLoad.stop();
-		        //Get the time
-		        long pageLoadTime_ms = pageLoad.getTime();
-		        long pageLoadTime_Seconds = pageLoadTime_ms / 1000;
-		        System.out.println("Total Page Load Time for " +  Parameters.urlContactPage + " " + pageLoadTime_ms + " milliseconds");
-		        System.out.println("Total Page Load Time: " + pageLoadTime_Seconds + " seconds");
-		    	softAssert.assertEquals(pageLoadTime_ms > 10000, "Page is too slow the page took " + pageLoadTime_ms + " the pass criteria is less than 10 seconds");
-		    	softAssert.assertAll();
+		  performanceTest(Parameters.urlContactPage,15);
+		  
+	  }
+	  
+	  @Test
+	  public void homePage() {
+		  	
+		  performanceTest(Parameters.urlHome,15);
+		  
 	  }
 		    	
 	  @BeforeMethod
@@ -50,8 +44,32 @@ public class PerformanceTest {
 
 	  @AfterMethod
 	  public void afterMethod() {
-		//  driver.quit();
+		  driver.quit();
 	  }
+	  
+	  public void performanceTest(String url, long perfTime){
+		  
+		  
+			SoftAssert softAssert = new SoftAssert();
+			StopWatch pageLoad = new StopWatch();
+			pageLoad.start();
+			driver.get(url);
+			 WebDriverWait wait = new WebDriverWait(driver, perfTime+10);
+		        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("main-nav")));
+
+		        pageLoad.stop();
+		        //Get the time
+		        long pageLoadTime_ms = pageLoad.getTime();
+		        long pageLoadTime_Seconds = pageLoadTime_ms / 1000;
+		        System.out.println("Total Page Load Time for " +  Parameters.urlContactPage + " " + pageLoadTime_ms + " milliseconds");
+		        System.out.println("Total Page Load Time: " + pageLoadTime_Seconds + " seconds");
+		    	softAssert.assertTrue(pageLoadTime_Seconds < perfTime, "Page is too slow the page took " + pageLoadTime_Seconds + " the pass criteria is less than " + perfTime + " seconds");
+		    	softAssert.assertAll();
+		  
+		  
+	  }
+	  
+	  
 	/*
 public static void measurePerformance(String[] siteAndUI)
 {

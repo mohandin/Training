@@ -9,18 +9,24 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">FullRun</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">1</td><td class="num">0</td><td class="num attn">2</td><td class="num">54,589</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Regression</a></td><td class="num">1</td><td class="num">0</td><td class="num attn">3</td><td class="num">96,378</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">FullRun</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">automationframework.ContactPageValidation</td><td><a href="#m0">inputValues</a></td><td rowspan="1">1537886063763</td><td rowspan="1">513</td></tr><tr class="failedodd"><td rowspan="1">automationframework.PerformanceTest</td><td><a href="#m1">main</a></td><td rowspan="1">1537886066989</td><td rowspan="1">30581</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">automationframework.ContactPageValidation</td><td><a href="#m2">checkValidationMsg</a></td><td rowspan="1">1537886056038</td><td rowspan="1">691</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">FullRun</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Regression &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">automationframework.ContactPageValidation</td><td><a href="#m0">inputValues</a></td><td rowspan="1">1537897097840</td><td rowspan="1">439</td></tr><tr class="failedodd"><td rowspan="2">automationframework.PerformanceTest</td><td><a href="#m1">contactPage</a></td><td rowspan="1">1537897101257</td><td rowspan="1">19664</td></tr><tr class="failedodd"><td><a href="#m2">homePage</a></td><td rowspan="1">1537897124266</td><td rowspan="1">22503</td></tr><tr><th colspan="4">Regression &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">automationframework.ContactPageValidation</td><td><a href="#m3">checkValidationMsg</a></td><td rowspan="1">1537897078286</td><td rowspan="1">663</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">automationframework.ContactPageValidation#inputValues</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+<h2>Regression</h2><h3 id="m0">automationframework.ContactPageValidation#inputValues</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
 	expected [Validation Msg is appearing] but found [false]
 	at automationframework.ContactPageValidation.inputValues(ContactPageValidation.java:93)
 ... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">automationframework.PerformanceTest#main</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
-	expected [Page is too slow 30574] but found [true]
-	at automationframework.PerformanceTest.main(PerformanceTest.java:39)
+<h3 id="m1">automationframework.PerformanceTest#contactPage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+	Page is too slow the page took 19 the pass criteria is less than 10 seconds expected [true] but found [false]
+	at automationframework.PerformanceTest.performanceTest(PerformanceTest.java:67)
+	at automationframework.PerformanceTest.contactPage(PerformanceTest.java:25)
 ... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">automationframework.ContactPageValidation#checkValidationMsg</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">automationframework.PerformanceTest#homePage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+	Page is too slow the page took 22 the pass criteria is less than 10 seconds expected [true] but found [false]
+	at automationframework.PerformanceTest.performanceTest(PerformanceTest.java:67)
+	at automationframework.PerformanceTest.homePage(PerformanceTest.java:32)
+... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">automationframework.ContactPageValidation#checkValidationMsg</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
