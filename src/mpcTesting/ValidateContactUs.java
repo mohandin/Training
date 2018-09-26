@@ -1,4 +1,4 @@
-package automationframework;
+package mpcTesting;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;

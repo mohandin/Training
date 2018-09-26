@@ -1,4 +1,4 @@
-package automationframework;
+package mpcTesting;
 
 public class Parameters {
 

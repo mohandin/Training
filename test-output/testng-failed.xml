@@ -3,21 +3,20 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [FullRun]">
   <test thread-count="5" name="Regression(failed)">
     <classes>
-      <class name="automationframework.ContactPageValidation">
+      <class name="mpcTesting.ContactPageValidation">
         <methods>
+          <include name="beforeMethod"/>
           <include name="afterMethod"/>
           <include name="inputValues"/>
-          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- automationframework.ContactPageValidation -->
-      <class name="automationframework.PerformanceTest">
+      </class> <!-- mpcTesting.ContactPageValidation -->
+      <class name="mpcTesting.PerformanceTest">
         <methods>
           <include name="contactPage"/>
           <include name="beforeMethod"/>
           <include name="afterMethod"/>
-          <include name="homePage"/>
         </methods>
-      </class> <!-- automationframework.PerformanceTest -->
+      </class> <!-- mpcTesting.PerformanceTest -->
     </classes>
   </test> <!-- Regression(failed) -->
 </suite> <!-- Failed suite [FullRun] -->

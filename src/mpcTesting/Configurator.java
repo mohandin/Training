@@ -1,4 +1,4 @@
-package automationframework;
+package mpcTesting;
 
 import java.io.BufferedWriter;
 import java.io.File;

@@ -1,4 +1,4 @@
-package automationframework;
+package mpcTesting;
 
 import org.apache.commons.lang3.time.StopWatch;
 import org.openqa.selenium.By;

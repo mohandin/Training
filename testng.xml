@@ -3,8 +3,8 @@
 <suite name="FullRun">
   <test thread-count="5" name="Regression">
   <classes>
-  <class name="automationframework.ContactPageValidation"/>
-  <class name="automationframework.PerformanceTest"/>
+  <class name="mpcTesting.ContactPageValidation"/>
+  <class name="mpcTesting.PerformanceTest"/>
   </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
