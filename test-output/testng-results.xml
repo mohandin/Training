@@ -1,21 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="6" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="23445" started-at="2018-10-02T13:10:20Z" finished-at="2018-10-02T13:10:43Z">
+  <suite name="FullRun" duration-ms="57095" started-at="2018-10-02T13:26:19Z" finished-at="2018-10-02T13:27:16Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="23445" started-at="2018-10-02T13:10:20Z" finished-at="2018-10-02T13:10:43Z">
-      <class name="mpcTesting.MenuTest">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:mpcTesting.MenuTest@26be92ad]" name="beforeMethod" is-config="true" duration-ms="3835" started-at="2018-10-02T13:10:20Z" finished-at="2018-10-02T13:10:23Z">
+    <test name="Regression" duration-ms="57095" started-at="2018-10-02T13:26:19Z" finished-at="2018-10-02T13:27:16Z">
+      <class name="mpcTesting.InitialClass">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:mpcTesting.InitialClass@28d25987]" name="beforeClass" is-config="true" duration-ms="22" started-at="2018-10-02T13:26:19Z" finished-at="2018-10-02T13:26:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="aferClass()[pri:0, instance:mpcTesting.InitialClass@28d25987]" name="aferClass" is-config="true" duration-ms="2" started-at="2018-10-02T13:27:16Z" finished-at="2018-10-02T13:27:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aferClass -->
+      </class> <!-- mpcTesting.InitialClass -->
+      <class name="mpcTesting.ContactPageValidation">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:mpcTesting.ContactPageValidation@4501b7af]" name="beforeMethod" is-config="true" duration-ms="7692" started-at="2018-10-02T13:26:19Z" finished-at="2018-10-02T13:26:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="topMenuDropdownValidate()[pri:0, instance:mpcTesting.MenuTest@26be92ad]" name="topMenuDropdownValidate" duration-ms="4448" started-at="2018-10-02T13:10:23Z" finished-at="2018-10-02T13:10:28Z">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="PASS" signature="checkValidationMsg()[pri:0, instance:mpcTesting.ContactPageValidation@4501b7af]" name="checkValidationMsg" duration-ms="844" started-at="2018-10-02T13:26:27Z" finished-at="2018-10-02T13:26:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkValidationMsg -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:mpcTesting.ContactPageValidation@4501b7af]" name="afterMethod" is-config="true" duration-ms="657" started-at="2018-10-02T13:26:28Z" finished-at="2018-10-02T13:26:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:mpcTesting.ContactPageValidation@4501b7af]" name="beforeMethod" is-config="true" duration-ms="6915" started-at="2018-10-02T13:26:29Z" finished-at="2018-10-02T13:26:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="inputValues()[pri:0, instance:mpcTesting.ContactPageValidation@4501b7af]" name="inputValues" duration-ms="457" started-at="2018-10-02T13:26:35Z" finished-at="2018-10-02T13:26:36Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+expected [Validation Msg is appearing] but found [false]]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at mpcTesting.MenuTest.topMenuDropdownValidate(MenuTest.java:61)
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [Validation Msg is appearing] but found [false]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+at mpcTesting.ContactPageValidation.inputValues(ContactPageValidation.java:101)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -43,27 +71,67 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- topMenuDropdownValidate -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:mpcTesting.MenuTest@26be92ad]" name="afterMethod" is-config="true" duration-ms="664" started-at="2018-10-02T13:10:28Z" finished-at="2018-10-02T13:10:28Z">
+        </test-method> <!-- inputValues -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:mpcTesting.ContactPageValidation@4501b7af]" name="afterMethod" is-config="true" duration-ms="657" started-at="2018-10-02T13:26:36Z" finished-at="2018-10-02T13:26:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:mpcTesting.MenuTest@26be92ad]" name="beforeMethod" is-config="true" duration-ms="2851" started-at="2018-10-02T13:10:28Z" finished-at="2018-10-02T13:10:31Z">
+      </class> <!-- mpcTesting.ContactPageValidation -->
+      <class name="mpcTesting.PerformanceTest">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:mpcTesting.PerformanceTest@5b275dab]" name="beforeMethod" is-config="true" duration-ms="2634" started-at="2018-10-02T13:26:59Z" finished-at="2018-10-02T13:27:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="topMenuPagesValidate()[pri:0, instance:mpcTesting.MenuTest@26be92ad]" name="topMenuPagesValidate" duration-ms="10957" started-at="2018-10-02T13:10:31Z" finished-at="2018-10-02T13:10:42Z">
+        <test-method status="PASS" signature="contactPage()[pri:0, instance:mpcTesting.PerformanceTest@5b275dab]" name="contactPage" duration-ms="5448" started-at="2018-10-02T13:27:01Z" finished-at="2018-10-02T13:27:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contactPage -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:mpcTesting.PerformanceTest@5b275dab]" name="afterMethod" is-config="true" duration-ms="708" started-at="2018-10-02T13:27:07Z" finished-at="2018-10-02T13:27:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:mpcTesting.PerformanceTest@5b275dab]" name="beforeMethod" is-config="true" duration-ms="4172" started-at="2018-10-02T13:27:07Z" finished-at="2018-10-02T13:27:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="homePage()[pri:0, instance:mpcTesting.PerformanceTest@5b275dab]" name="homePage" duration-ms="4245" started-at="2018-10-02T13:27:11Z" finished-at="2018-10-02T13:27:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePage -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:mpcTesting.PerformanceTest@5b275dab]" name="afterMethod" is-config="true" duration-ms="707" started-at="2018-10-02T13:27:16Z" finished-at="2018-10-02T13:27:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- mpcTesting.PerformanceTest -->
+      <class name="mpcTesting.MenuTest">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:mpcTesting.MenuTest@523884b2]" name="beforeMethod" is-config="true" duration-ms="2709" started-at="2018-10-02T13:26:37Z" finished-at="2018-10-02T13:26:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="topMenuDropdownValidate()[pri:0, instance:mpcTesting.MenuTest@523884b2]" name="topMenuDropdownValidate" duration-ms="4430" started-at="2018-10-02T13:26:39Z" finished-at="2018-10-02T13:26:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- topMenuDropdownValidate -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:mpcTesting.MenuTest@523884b2]" name="afterMethod" is-config="true" duration-ms="560" started-at="2018-10-02T13:26:44Z" finished-at="2018-10-02T13:26:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:mpcTesting.MenuTest@523884b2]" name="beforeMethod" is-config="true" duration-ms="2689" started-at="2018-10-02T13:26:44Z" finished-at="2018-10-02T13:26:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="topMenuPagesValidate()[pri:0, instance:mpcTesting.MenuTest@523884b2]" name="topMenuPagesValidate" duration-ms="10842" started-at="2018-10-02T13:26:47Z" finished-at="2018-10-02T13:26:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- topMenuPagesValidate -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:mpcTesting.MenuTest@26be92ad]" name="afterMethod" is-config="true" duration-ms="659" started-at="2018-10-02T13:10:42Z" finished-at="2018-10-02T13:10:43Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:mpcTesting.MenuTest@523884b2]" name="afterMethod" is-config="true" duration-ms="694" started-at="2018-10-02T13:26:58Z" finished-at="2018-10-02T13:26:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
       </class> <!-- mpcTesting.MenuTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Regression -->
+  </suite> <!-- FullRun -->
 </testng-results>

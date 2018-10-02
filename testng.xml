@@ -5,6 +5,7 @@
   <classes>
   <class name="mpcTesting.InitialClass"/>
   <class name="mpcTesting.ContactPageValidation"/>
+  <class name="mpcTesting.MenuTest"/>
   <class name="mpcTesting.PerformanceTest"/>
   </classes>
   </test> <!-- Test -->

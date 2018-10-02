@@ -8,13 +8,15 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num attn">1</td><td class="num">23,445</td><td></td><td></td></tr>
+<tr><th colspan="7">FullRun</th></tr>
+<tr><td><a href="#t0">Regression</a></td><td class="num">5</td><td class="num">0</td><td class="num attn">1</td><td class="num">57,095</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">mpcTesting.MenuTest</td><td><a href="#m0">topMenuDropdownValidate</a></td><td rowspan="1">1538485823876</td><td rowspan="1">4448</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">mpcTesting.MenuTest</td><td><a href="#m1">topMenuPagesValidate</a></td><td rowspan="1">1538485831845</td><td rowspan="1">10957</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">FullRun</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Regression &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">mpcTesting.ContactPageValidation</td><td><a href="#m0">inputValues</a></td><td rowspan="1">1538486795969</td><td rowspan="1">457</td></tr><tr><th colspan="4">Regression &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">mpcTesting.ContactPageValidation</td><td><a href="#m1">checkValidationMsg</a></td><td rowspan="1">1538486787550</td><td rowspan="1">844</td></tr><tr class="passedodd"><td rowspan="2">mpcTesting.MenuTest</td><td><a href="#m2">topMenuDropdownValidate</a></td><td rowspan="1">1538486799795</td><td rowspan="1">4430</td></tr><tr class="passedodd"><td><a href="#m3">topMenuPagesValidate</a></td><td rowspan="1">1538486807475</td><td rowspan="1">10842</td></tr><tr class="passedeven"><td rowspan="2">mpcTesting.PerformanceTest</td><td><a href="#m4">contactPage</a></td><td rowspan="1">1538486821651</td><td rowspan="1">5448</td></tr><tr class="passedeven"><td><a href="#m5">homePage</a></td><td rowspan="1">1538486831981</td><td rowspan="1">4245</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">mpcTesting.MenuTest#topMenuDropdownValidate</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at mpcTesting.MenuTest.topMenuDropdownValidate(MenuTest.java:61)
+<h2>Regression</h2><h3 id="m0">mpcTesting.ContactPageValidation#inputValues</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+	expected [Validation Msg is appearing] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+	at mpcTesting.ContactPageValidation.inputValues(ContactPageValidation.java:101)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -41,6 +43,10 @@
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">mpcTesting.MenuTest#topMenuPagesValidate</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">mpcTesting.ContactPageValidation#checkValidationMsg</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">mpcTesting.MenuTest#topMenuDropdownValidate</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">mpcTesting.MenuTest#topMenuPagesValidate</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">mpcTesting.PerformanceTest#contactPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">mpcTesting.PerformanceTest#homePage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
