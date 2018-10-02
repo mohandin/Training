@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 2 failed,   2 passed</span>
+                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -100,11 +100,6 @@
                       <a href="#" panel-name="suite-FullRun" class="show-methods failed suite-FullRun"> (show)</a> <!-- show-methods failed suite-FullRun -->
                     </span>
                     <div class="method-list-content failed suite-FullRun">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-FullRun" title="mpcTesting.PerformanceTest" hash-for-method="contactPage">contactPage</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-FullRun" title="mpcTesting.ContactPageValidation" hash-for-method="inputValues">inputValues</a> <!-- method navigator-link -->
@@ -122,6 +117,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-FullRun" title="mpcTesting.ContactPageValidation" hash-for-method="checkValidationMsg">checkValidationMsg</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-FullRun" title="mpcTesting.PerformanceTest" hash-for-method="contactPage">contactPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -154,29 +154,34 @@
                   <span class="method-name">inputValues</span>
                   <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
 	expected [Validation Msg is appearing] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
 	at mpcTesting.ContactPageValidation.inputValues(ContactPageValidation.java:93)
-... Removed 26 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-FullRun-class-failed -->
-          <div class="suite-FullRun-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">mpcTesting.PerformanceTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="contactPage">
-                  </a> <!-- contactPage -->
-                  <span class="method-name">contactPage</span>
-                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
-	Page is too slow the page took 29 the pass criteria is less than 15 seconds expected [true] but found [false]
-	at mpcTesting.PerformanceTest.performanceTest(PerformanceTest.java:67)
-	at mpcTesting.PerformanceTest.contactPage(PerformanceTest.java:25)
-... Removed 26 stack frames
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -205,6 +210,13 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="contactPage">
+                  </a> <!-- contactPage -->
+                  <span class="method-name">contactPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="homePage">
                   </a> <!-- homePage -->
                   <span class="method-name">homePage</span>
@@ -221,9 +233,10 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;FullRun&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Regression&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;10&quot; name=&quot;FullRun&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;10&quot; name=&quot;Regression&quot;&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;mpcTesting.InitialClass&quot;/&gt;
       &lt;class name=&quot;mpcTesting.ContactPageValidation&quot;/&gt;
       &lt;class name=&quot;mpcTesting.PerformanceTest&quot;/&gt;
     &lt;/classes&gt;
@@ -239,7 +252,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Regression (2 classes)</span>
+                <span class="test-name">Regression (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -269,24 +282,24 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'contactPage')
 data.setCell(0, 2, 'mpcTesting.PerformanceTest')
-data.setCell(0, 3, 29779);
+data.setCell(0, 3, 4244);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'homePage')
 data.setCell(1, 2, 'mpcTesting.PerformanceTest')
-data.setCell(1, 3, 3392);
+data.setCell(1, 3, 3706);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'checkValidationMsg')
 data.setCell(2, 2, 'mpcTesting.ContactPageValidation')
-data.setCell(2, 3, 558);
+data.setCell(2, 3, 522);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'inputValues')
 data.setCell(3, 2, 'mpcTesting.ContactPageValidation')
-data.setCell(3, 3, 402);
+data.setCell(3, 3, 407);
 window.suiteTableData['FullRun']= { tableData: data, tableDiv: 'times-div-FullRun'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 34 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-FullRun">
               </div> <!-- times-div-FullRun -->
             </div> <!-- times-div -->
@@ -312,62 +325,74 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+              <div class="chronological-class-name">mpcTesting.InitialClass</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
               <div class="chronological-class-name">mpcTesting.ContactPageValidation</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">39 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">checkValidationMsg</span>
-                <span class="method-start">12314 ms</span>
+                <span class="method-start">7529 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">12874 ms</span>
+                <span class="method-start">8053 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">12876 ms</span>
+                <span class="method-start">8688 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">inputValues</span>
-                <span class="method-start">37121 ms</span>
+                <span class="method-start">15336 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">37527 ms</span>
+                <span class="method-start">15747 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">mpcTesting.PerformanceTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">37531 ms</span>
+                <span class="method-start">16380 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">contactPage</span>
-                <span class="method-start">40064 ms</span>
+                <span class="method-start">18963 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">69845 ms</span>
+                <span class="method-start">23208 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">70515 ms</span>
+                <span class="method-start">23844 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">homePage</span>
-                <span class="method-start">73160 ms</span>
+                <span class="method-start">26472 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">76553 ms</span>
+                <span class="method-start">30179 ms</span>
               </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">mpcTesting.InitialClass</div> <!-- chronological-class-name -->
+              <div class="configuration-suite after">
+                <span class="method-name">aferClass</span>
+                <span class="method-start">30840 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

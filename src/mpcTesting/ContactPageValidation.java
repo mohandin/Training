@@ -96,8 +96,7 @@ public class ContactPageValidation {
   @BeforeMethod
   public void beforeMethod() throws IOException {
 	  	
-		Configurator.intialize();
-		System.setProperty("webdriver.chrome.driver","C:/tool/Chromedriver/chromedriver.exe");
+		Configurator.intialize();		System.setProperty("webdriver.chrome.driver","C:/tool/Chromedriver/chromedriver.exe");
 		
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("start-maximized");
@@ -109,8 +108,7 @@ public class ContactPageValidation {
 
   @AfterMethod
   public void afterMethod() throws IOException {
-	//  driver.quit();
-	  Configurator.cleanup();
+	  driver.quit();
   }
 
 }

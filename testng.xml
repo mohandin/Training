@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="FullRun">
+<suite name="FullRun" verbose="10">
   <test thread-count="5" name="Regression">
   <classes>
+  <class name="mpcTesting.InitialClass"/>
   <class name="mpcTesting.ContactPageValidation"/>
   <class name="mpcTesting.PerformanceTest"/>
   </classes>
