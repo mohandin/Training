@@ -7,7 +7,11 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 /*
  * 
@@ -16,14 +20,15 @@ import org.openqa.selenium.interactions.Actions;
  */
 public class MenuTest {
 
+	public WebDriver driver;
+	public Actions builder;
 	/*
 	 * This class tests the top menu and verifies the regions are displayed when the user clicks on menu header.
 	 */
-	public static void topMenuDropdownValidate() throws IOException
+	 @Test
+	public void topMenuDropdownValidate() throws IOException
 	{
 		boolean status = false;
-		System.setProperty("webdriver.chrome.driver","C:/tool/Chromedriver/chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
 		
 		driver.get(Parameters.urlHome);
 		Actions builder = new Actions(driver);
@@ -58,12 +63,13 @@ public class MenuTest {
 		driver.close();
 	}
 	
-	public static void topMenuPagesValidate()
+	@Test
+	public void topMenuPagesValidate()
 	{
 		System.setProperty("webdriver.chrome.driver","C:/tool/Chromedriver/chromedriver.exe");
 		
 		WebDriver driver = new ChromeDriver();		
-		driver.get("https://modernpreciouscoin.com");
+		driver.get(Parameters.urlHome);
 		
 		Actions builder = new Actions(driver);
 		
@@ -72,4 +78,25 @@ public class MenuTest {
 		driver.close();
 		
 	}
+	
+	  
+	  @BeforeMethod
+	  public void beforeMethod() {
+		  	
+		  
+		  	ChromeOptions options = new ChromeOptions();
+			options.addArguments("start-maximized");
+			
+			System.setProperty("webdriver.chrome.driver","C:/tool/Chromedriver/chromedriver.exe");
+			driver = new ChromeDriver(options);
+			builder = new Actions(driver);
+	  }
+
+	  @AfterMethod
+	  public void afterMethod()  {
+		  driver.quit();
+	
+	  }
+	  
+
 }

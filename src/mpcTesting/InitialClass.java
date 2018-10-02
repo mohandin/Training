@@ -9,7 +9,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 /**
- * @author i56625
+ * Initialize the logger and anything else that is needed for the test
  *
  */
 public class InitialClass {

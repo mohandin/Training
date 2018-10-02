@@ -13,6 +13,14 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterMethod;
 
+/*
+ * 
+ * 
+ * Class name: Contact Page Validation
+ * Test the contact page
+ * 
+ */
+
 public class ContactPageValidation {
 
 	public static WebDriver driver;

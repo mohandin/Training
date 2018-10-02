@@ -1,6 +1,9 @@
-package mpcTesting;
+package mpcTesting.Old;
 
 import org.testng.annotations.Test;
+
+import mpcTesting.Parameters;
+
 import org.testng.annotations.BeforeMethod;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -36,7 +39,7 @@ public class ValidateContactUs {
 
 	  @AfterMethod
 	  public void afterMethod() {
-		//  driver.quit();
+		driver.quit();
 	  }
 
 }

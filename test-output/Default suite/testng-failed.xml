@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automationframework.PerformanceTest">
+      <class name="mpcTesting.MenuTest">
         <methods>
-          <include name="contactPage"/>
-          <include name="beforeMethod"/>
+          <include name="topMenuDropdownValidate"/>
           <include name="afterMethod"/>
-          <include name="homePage"/>
+          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- automationframework.PerformanceTest -->
+      </class> <!-- mpcTesting.MenuTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

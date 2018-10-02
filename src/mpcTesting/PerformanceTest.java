@@ -15,6 +15,13 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+/*
+ * 
+ * 
+ * Class name: Performance Test
+ * Test the response time of a page and fail the test if it is below threshold 
+ * 
+ */
 public class PerformanceTest {
 	
 	public WebDriver driver;
@@ -44,7 +51,6 @@ public class PerformanceTest {
 			
 			System.setProperty("webdriver.chrome.driver","C:/tool/Chromedriver/chromedriver.exe");
 			driver = new ChromeDriver(options);
-			
 			builder = new Actions(driver);
 	  }
 
@@ -69,24 +75,16 @@ public class PerformanceTest {
 		        long pageLoadTime_ms = pageLoad.getTime();
 		        long pageLoadTime_Seconds = pageLoadTime_ms / 1000;
 		        Configurator.logmsg.write("Total Page Load Time for " +  Parameters.urlContactPage + " " + pageLoadTime_ms + " milliseconds");
+		        Configurator.logmsg.newLine();
 		        //System.out.println("Total Page Load Time for " +  Parameters.urlContactPage + " " + pageLoadTime_ms + " milliseconds");
 		        Configurator.logmsg.write("Total Page Load Time: " + pageLoadTime_Seconds + " seconds");
+		        Configurator.logmsg.newLine();
 		        //System.out.println("Total Page Load Time: " + pageLoadTime_Seconds + " seconds");
 		    	softAssert.assertTrue(pageLoadTime_Seconds < perfTime, "Page is too slow the page took " + pageLoadTime_Seconds + " the pass criteria is less than " + perfTime + " seconds");
 		    	softAssert.assertAll();
 		  
 		  
 	  }
-	  
-	  
-	/*
-public static void measurePerformance(String[] siteAndUI)
-{
-	
-	System.setProperty("webdriver.chrome.driver","C:/tool/Chromedriver/chromedriver.exe");
-	WebDriver driver = new ChromeDriver();
 
-        driver.close();
-}*/
 	
 }

@@ -1,6 +1,10 @@
-package mpcTesting;
+package mpcTesting.Old;
 
 import java.io.IOException;
+
+import mpcTesting.Configurator;
+import mpcTesting.ContactPageValidation;
+import mpcTesting.Parameters;
 
 public class LaunchSite {
 

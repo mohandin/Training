@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" verbose="10" name="Failed suite [FullRun]">
-  <test thread-count="5" verbose="10" name="Regression(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="mpcTesting.ContactPageValidation">
+      <class name="mpcTesting.MenuTest">
         <methods>
-          <include name="beforeMethod"/>
+          <include name="topMenuDropdownValidate"/>
           <include name="afterMethod"/>
-          <include name="inputValues"/>
+          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- mpcTesting.ContactPageValidation -->
+      </class> <!-- mpcTesting.MenuTest -->
     </classes>
-  </test> <!-- Regression(failed) -->
-</suite> <!-- Failed suite [FullRun] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
